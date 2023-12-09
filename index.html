@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/1617121917logo quran islamic.svg">
+
+<meta property="og:title" content='القران الكريم'/>
+<meta property="og:image" content='https://i.ibb.co/L9Lyj02/Green-Desktop-Computer-Mockup.jpg"'/>
+<meta property="og:description" content='استمع للقران الكريم بصوت أكثر من 300 قارئ و أكثر من 20 رواية ، و مواقيت الصلاة لأكثر من 15 ولاية داخل السودان'/>
+<meta property= "og:url" content='URL OF YOUR WEBSITE'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='627' />
+<meta property="og:type" content='website'/>
+
+<script src="https://cdn.tutorialjinni.com/hls.js/1.2.1/hls.min.js"></script>
+
+<title>القران الكريم</title>
+
+</head>
+<body>
+    <main class="container">
+        <nav class="nav-bar">
+            <img src="/assets/1617121917logo quran islamic.svg" alt="القران الكريم">
+            <ul>
+                <li><a class="li-active" href="#intro">القران الكريم</a></li>
+                <li><a href="#prayer-times">مواقيت الصلاة</a></li>
+                <li><a href="#live-stream">البث المباشر</a></li>
+            </ul>
+        </nav>
+        <section class="intro" id="intro">
+            <p>استمع للقران الكريم بصوت أكثر من 300 قارئ و أكثر من 20 رواية ، و مواقيت الصلاة لأكثر من 15 ولاية داخل السودان</p>
+            <div class="recite">
+                <form action="" class="options">
+                    <div>
+                        <h4>اللغة</h4>                    
+                        <select name="اللغة" id="choseLanguage">
+                            <option value="">اختر لغة</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4>القارئ</h4>                    
+                        <select name="القارئ" id="choseReciter">
+                            <option value="1">اختر قارئ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4>التلاوة</h4>                    
+                        <select name="التلاوة" id="choseMoshaf"><option value="1">اختر تلاوة</option>
+                        <option value="2">2</option>
+                        <option value="3">4</option></select>
+                    </div>
+                    <div>
+                        <h4>السورة</h4>                    
+                        <select name="السورة" id="choseSurah">
+                            <option value="">اختر سورة</option>
+                    </select>
+                    </div>
+                </form>
+                <audio controls autoplay id="audioPlayer" style="width: 100%;">
+                  Your browser does not support the audio element.
+                  </audio>
+            </div>
+        </section>
+        <section class="prayer-times" id="prayer-times">
+            <div class="location">
+                <select name="location" id="choseLocation">
+                </select>
+                <p id="locationName">
+                    بورتسودان
+                </p>
+                <span id="date"></span>
+            </div>
+            <div class="prayers" id="prayers">
+                <div class="times"><h4>الفجر</h4><span id="Fajr"></span></div>
+                <div class="times"><h4>الشروق</h4><span id="Sunrise"></span></div>
+                <div class="times"><h4>الظهر</h4><span id="Dhuhr"></span></div>
+                <div class="times"><h4>العصر</h4><span id="Asr"></span></div>
+                <div class="times"><h4>المغرب</h4><span id="Maghrib"></span></div>
+                <div class="times"><h4>العشاء</h4><span id="Isha"></span></div>
+            </div>
+        </section>
+        <section class="live-stream" id="live-stream">
+            <span>البث المباشر</span>
+            <div id="btn-group">
+                <button onclick="playLive('https://win.holol.com/live/quran/playlist.m3u8')">القران الكريم</button>
+                <button onclick="playLive('https://win.holol.com/live/sunnah/playlist.m3u8')">السنة النبوية</button>
+            </div>
+            <video controls id="live">
+              Your browser does not support the video tag.
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+        </section>
+        <footer>
+            تم التطوير من &#9829; 
+محمد أحمد أمين            &#169; 2023
+        </footer>
+    </main>
+</body>
+<script src="/script.js"></script>
+</html>
