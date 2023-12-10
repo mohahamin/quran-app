@@ -83,9 +83,6 @@ playSurah();
 
 // ------------------------------------------------ Adhan API ---------------------------------------------------------------- //
 
-
-// const cities = ["Al Baḩr al Aḩmar"	"Al Jazīrah"	"Al Kharţūm"	"Al Qaḑārif"	"An Nīl al Abyaḑ"	"An Nīl al Azraq"	"Ash Shamālīyah"	"Blue Nile"	"Central Darfur"	"Zalingei" "East Darfur Gedaref"  "Gezira"	"Gharb Dārfūr"	"Gharb Kurdufān"	"Janūb Dārfūr"	"Janūb Kurdufān"	"Kassala" "Khartoum"	"Nahr an Nīl"	"North Darfur"	"North Kordofan" "Red Sea"	"River Nile"	"Sennar"  "Shamāl Dārfūr"	"Shamāl Kurdufān"	"Sharq Dārfūr"	"South Darfur"	"South Kordofan"	"West Darfur"	"West Kordofan"	"White Nile"]
-
 const cities = [
     {"بورتسودان" : "Red Sea"},
     {"ود مدني" : "Al Jazīrah"},
@@ -120,18 +117,13 @@ choseLocation.addEventListener('change', e => {
     getPrayers(selectedLocation.value)
 });
 
+// Get prayers from api
 async function getPrayers(selectedLocation) {
     const AdhanApiUrl = "https://api.aladhan.com/v1/timingsByCity";
     const country = "SD";
-    // const times = ["Fajr","Dhuhr","Asr","Maghrib","Isha"];
-    // const time = document.querySelectorAll("[time]");
     const response = await fetch(`${AdhanApiUrl}?country=${country}&city=${selectedLocation}`);
     const data = await response.json();
     const timings = data.data.timings
-    // console.log(timings)
-    console.log(data.data.date.hijri.weekday.ar)
-    console.log(data.data.date.hijri.day)
-    console.log(data.data.date.hijri.month.ar)
     document.getElementById("date").innerHTML = `${data.data.date.hijri.weekday.ar} - ${data.data.date.hijri.day} - ${data.data.date.hijri.month.ar}`
     fillPrayerTimes("Fajr", timings.Fajr)
     fillPrayerTimes("Sunrise", timings.Sunrise)
@@ -144,8 +136,9 @@ async function getPrayers(selectedLocation) {
         document.getElementById(id).innerHTML = `<span>${time}</span>`
     }
 }
-    getPrayers()
-    // console.log(cities.values())
+    getPrayers();
+
+// ------------------------------------------------ Adhan API ---------------------------------------------------------------- //
 
 
 
