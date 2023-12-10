@@ -121,7 +121,7 @@ choseLocation.addEventListener('change', e => {
 });
 
 async function getPrayers(selectedLocation) {
-    const AdhanApiUrl = "http://api.aladhan.com/v1/timingsByCity";
+    const AdhanApiUrl = "https://api.aladhan.com/v1/timingsByCity";
     const country = "SD";
     // const times = ["Fajr","Dhuhr","Asr","Maghrib","Isha"];
     // const time = document.querySelectorAll("[time]");
