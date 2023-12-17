@@ -8,9 +8,6 @@
     color: #202124;
     border: none;
 }
-body {
-    overflow: hidden;
-}
 html {
     scroll-behavior: smooth;
 }
