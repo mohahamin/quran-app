@@ -17,7 +17,6 @@ html {
 .container {
     width: 80%;
     margin: 0 auto;
-    scroll-snap-type: y mandatory;
 }
 .nav-bar {
     display: flex;
